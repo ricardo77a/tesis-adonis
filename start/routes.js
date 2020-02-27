@@ -17,3 +17,7 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+Route.resource('tarea', 'TareaController').validator(new Map([
+	[['tarea.store'], ['Tarea']],
+    [['tarea.update'], ['Tarea']]
+]))
